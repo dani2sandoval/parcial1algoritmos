@@ -1,1 +1,37 @@
-Hola Mundo
+Proceso Polizas
+    Definir sumaAsegurada, parte1, parte2, parte3, resto, repartoParte2, parteEspecial Como Real
+    
+    Escribir "ingrese la suma asegurada: "
+    Leer sumaAsegurada
+    
+    Si sumaAsegurada <= 100000 Entonces
+        parte1 = sumaAsegurada * 0.8
+        repartoParte2 = sumaAsegurada * 0.1
+        
+        Mostrar "aseguradora recibirá: ", parte1
+        Mostrar "todos los socio recibirá: ", repartoParte2 / 2
+		
+    Sino 
+        Si sumaAsegurada <= 120000 Entonces
+            parte1 = 100000 * 0.8
+            parte2 = (sumaAsegurada - 100000) * 0.8
+            repartoParte2 = parte2 / 2
+            
+            Mostrar "aseguradora recibirá: ", parte1
+            Mostrar "todos los socio recibirá: ", repartoParte2
+        Sino
+            parte1 = 100000 * 0.8
+            parte2 = 20000 * 0.8
+            parteEspecial = sumaAsegurada - 120000
+            
+            Mostrar "aseguradora recibirá: ", parte1
+            Mostrar "todos los socio recibirá: ", parte2
+            Mostrar "el tercero recibirá: ", parteEspecial
+        Fin Si
+    Fin Si
+FinProceso
+
+
+
+
+
